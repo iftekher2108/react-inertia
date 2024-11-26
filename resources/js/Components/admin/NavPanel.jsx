@@ -1,17 +1,18 @@
-import MenuLink from "../MenuLink"
+import { Link } from "@inertiajs/react"
+import MenuLink from "./MenuLink"
 
 function NavPanel() {
     return (
         <>
             <div className='bg-slate-700 rounded-lg'>
                 <ul className="menu rounded-box">
-                    <li><MenuLink href={route('dashboard')} active={route().current('dashboard')}>Dash Board</MenuLink></li>
+                    <li><MenuLink href={route('dashboard')} active={route().current('dashboard')}><i className="fa-solid fa-house"></i> Dash Board</MenuLink></li>
                     <li>
                         <details>
                             <summary>Parent</summary>
                             <ul>
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
+                                <li><MenuLink href={''} active={''}> Submenu 1</MenuLink></li>
+                                <li><MenuLink href={''} active={''}>Submenu 2</MenuLink></li>
 
                             </ul>
                         </details>
@@ -20,12 +21,12 @@ function NavPanel() {
                         <details>
                             <summary>Parent</summary>
                             <ul>
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
+                                <li><MenuLink href={''} active={''}>Submenu 1</MenuLink></li>
+                                <li><MenuLink href={''} active={''}>Submenu 2</MenuLink></li>
                             </ul>
                         </details>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li><MenuLink href={''}>Item 3</MenuLink></li>
                 </ul>
             </div>
         </>

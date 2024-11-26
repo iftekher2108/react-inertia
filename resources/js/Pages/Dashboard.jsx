@@ -14,7 +14,10 @@ export default function Dashboard() {
 
             <div className='grid grid-cols-3 gap-3'>
                 <div className='glass bg-primary card p-4'>
-            hgjgfhj
+                    <div className='card-header'>
+                        hgjgfhj
+                    </div>
+
                 </div>
                 <div className='glass bg-success card p-4 '>
             jghjg

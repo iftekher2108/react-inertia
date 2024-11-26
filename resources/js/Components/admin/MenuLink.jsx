@@ -1,5 +1,4 @@
 import { Link } from "@inertiajs/react"
-// import { Children } from "react"
 
 function MenuLink({
     active = false,
@@ -8,7 +7,7 @@ function MenuLink({
  }) {
     return(
         <>
-            <Link {...props} className={active ? 'bg-primary' : ''} >{children}</Link>
+            <Link {...props} className={ 'p-3 mb-2 flex items-center hover:bg-primary focus:bg-primary'+' '+(active ? 'bg-primary ' : '')} >{children}</Link>
         </>
 
     )

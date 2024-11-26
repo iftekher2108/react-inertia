@@ -43,6 +43,7 @@ export default function UpdateProfileInformation({
                     <TextInput
                         id="name"
                         className="mt-1 block w-full"
+                        placeholder="Name"
                         value={data.name}
                         onChange={(e) => setData('name', e.target.value)}
                         required
@@ -60,6 +61,7 @@ export default function UpdateProfileInformation({
                         id="email"
                         type="email"
                         className="mt-1 block w-full"
+                        placeholder="Email"
                         value={data.email}
                         onChange={(e) => setData('email', e.target.value)}
                         required
@@ -77,7 +79,7 @@ export default function UpdateProfileInformation({
                                 href={route('verification.send')}
                                 method="post"
                                 as="button"
-                                className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                                className="rounded-md text-sm text-gray-600 underline dark:hover:text-slate-300 dark:text-gray-200 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                             >
                                 Click here to re-send the verification email.
                             </Link>

@@ -47,7 +47,7 @@ export default function UpdatePasswordForm({ className = '' }) {
     return (
         <section className={className}>
             <header>
-                <h2 className="text-lg font-medium text-gray-900">
+                <h2 className="text-lg font-medium text-gray-900 dark:text-gray-50">
                     Update Password
                 </h2>
 
@@ -68,6 +68,7 @@ export default function UpdatePasswordForm({ className = '' }) {
                         id="current_password"
                         ref={currentPasswordInput}
                         value={data.current_password}
+                        placeholder='current password'
                         onChange={(e) =>
                             setData('current_password', e.target.value)
                         }
@@ -89,6 +90,7 @@ export default function UpdatePasswordForm({ className = '' }) {
                         id="password"
                         ref={passwordInput}
                         value={data.password}
+                        placeholder="New Password"
                         onChange={(e) => setData('password', e.target.value)}
                         type="password"
                         className="mt-1 block w-full"
@@ -107,6 +109,7 @@ export default function UpdatePasswordForm({ className = '' }) {
                     <TextInput
                         id="password_confirmation"
                         value={data.password_confirmation}
+                        placeholder="Confirm Password"
                         onChange={(e) =>
                             setData('password_confirmation', e.target.value)
                         }

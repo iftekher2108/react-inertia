@@ -5,10 +5,10 @@ import ResponsiveNavLink from '@/Components/auth/ResponsiveNavLink';
 import { Link, usePage } from '@inertiajs/react';
 import NavPanel from '@/Components/admin/NavPanel';
 import { useState } from 'react';
-
 export default function AuthenticatedLayout({ header, children }) {
-    const user = usePage().props.auth.user;
-
+    // const user = usePage().props.auth.user;
+    // const { flash,auth } = usePage().props
+    console.log(props)
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
@@ -141,10 +141,10 @@ export default function AuthenticatedLayout({ header, children }) {
                     <div className="border-t border-gray-200 pb-1 pt-4">
                         <div className="px-4">
                             <div className="items-center text-gray-400 text-base font-medium ">
-                                <img src="" className='w-10 h-10 rounded-md me-2' alt="profile avatar" />  {user.name}
+                                <img src="" className='w-10 h-10 rounded-md me-2' alt="profile avatar" />  {auth.user.name}
                             </div>
                             <div className="text-sm font-medium text-gray-500">
-                                {user.email}
+                                {auth.user.email}
                             </div>
                         </div>
 
@@ -181,6 +181,22 @@ export default function AuthenticatedLayout({ header, children }) {
                             <NavPanel />
                             <div className="overflow-hidden col-span-4 bg-white dark:bg-slate-700 shadow-sm rounded-lg">
                                 <div className="p-6 text-gray-900">
+                                    {/* { flash.success && (
+                                        <div role="alert" className="alert alert-success mb-4">
+                                        <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          className="h-6 w-6 shrink-0 stroke-current"
+                                          fill="none"
+                                          viewBox="0 0 24 24">
+                                          <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <span>Your purchase has been confirmed!</span>
+                                      </div>
+                                    )} */}
                                     {children}
                                 </div>
                             </div>
