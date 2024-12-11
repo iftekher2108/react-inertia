@@ -7,14 +7,9 @@ summary {
     @apply !p-3 text-white text-opacity-80;
 }
 
-/* .dt-layout-row {
-    @apply flex items-center justify-between mb-3
-} */
-
 .dt-buttons {
     @apply flex gap-2
 }
-
 .dt-buttons .dt-button {
     @apply btn btn-primary text-white;
 }
