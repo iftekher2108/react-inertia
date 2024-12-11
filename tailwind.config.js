@@ -25,11 +25,13 @@ export default {
 
                     secondary: "#697565",
 
-                    accent: "#006dff",
+                    accent: "#2c3335",
 
                     neutral: "#1a2a3c",
 
-                    "base-100": "#1E201E",
+                    "base-100": "#EEEEEE",
+
+                    'base-200': '#DDDDDD',
 
                     info: "#0097ff",
 

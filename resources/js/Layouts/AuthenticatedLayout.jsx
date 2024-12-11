@@ -6,15 +6,15 @@ import { Link, usePage } from '@inertiajs/react';
 import NavPanel from '@/Components/admin/NavPanel';
 import { useState } from 'react';
 export default function AuthenticatedLayout({ header, children }) {
-    // const user = usePage().props.auth.user;
+    const user = usePage().props.auth.user;
     // const { flash,auth } = usePage().props
-    console.log(props)
+    // console.log(props)
     const [showingNavigationDropdown, setShowingNavigationDropdown] =
         useState(false);
 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-slate-900 dark:text-white">
-            <nav className="p-3 bg-white dark:bg-slate-900 dark:text-white">
+        <div className="min-h-screen bg-base-100">
+            <nav className="p-3 bg-accent">
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 justify-between">
                         <div className="flex">
@@ -24,14 +24,6 @@ export default function AuthenticatedLayout({ header, children }) {
                                 </Link>
                             </div>
 
-                            {/* <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink
-                                    href={route('dashboard')}
-                                    active={route().current('dashboard')}
-                                >
-                                    Dashboard
-                                </NavLink>
-                            </div> */}
                         </div>
 
                         <div className="hidden sm:ms-6 sm:flex sm:items-center">
@@ -41,7 +33,7 @@ export default function AuthenticatedLayout({ header, children }) {
                                         <span className="inline-flex rounded-md">
                                             <button
                                                 type="button"
-                                                className="inline-flex items-center rounded-md border border-transparent bg-white dark:bg-slate-700 px-3 py-2 text-sm font-medium leading-4  transition duration-150 ease-in-out hover:text-gray-300 focus:outline-none"
+                                                className="inline-flex items-center rounded-md border border-transparent bg-slate-700 px-3 py-2 text-sm font-medium leading-4  transition duration-150 ease-in-out text-gray-300 focus:outline-none"
                                             >
                                                 <img src="" className='w-10 h-10 me-2 rounded-md' alt="profile Avatar" />
                                                 {user.name}
@@ -141,10 +133,10 @@ export default function AuthenticatedLayout({ header, children }) {
                     <div className="border-t border-gray-200 pb-1 pt-4">
                         <div className="px-4">
                             <div className="items-center text-gray-400 text-base font-medium ">
-                                <img src="" className='w-10 h-10 rounded-md me-2' alt="profile avatar" />  {auth.user.name}
+                                <img src="" className='w-10 h-10 rounded-md me-2' alt="profile avatar" /> {user.name}
                             </div>
                             <div className="text-sm font-medium text-gray-500">
-                                {auth.user.email}
+                                {user.email}
                             </div>
                         </div>
 
@@ -164,24 +156,22 @@ export default function AuthenticatedLayout({ header, children }) {
                 </div>
             </nav>
 
-            {header && (
-                <header className="bg-white dark:bg-slate-800 shadow">
+            {/* {header && (
+                <header className="bg-slate-800 shadow">
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
                         {header}
                     </div>
                 </header>
-            )}
+            )} */}
 
 
             <main>
-                <div className="py-8">
-                    <div className="mx-auto max-w-7xl sm:px-6 lg:px-6">
-
-                        <div className='lg:grid grid-cols-5 gap-3'>
-                            <NavPanel />
-                            <div className="overflow-hidden col-span-4 bg-white dark:bg-slate-700 shadow-sm rounded-lg">
-                                <div className="p-6 text-gray-900">
-                                    {/* { flash.success && (
+                <div>
+                    <div className='lg:grid grid-cols-5 gap-2'>
+                        <NavPanel />
+                        <div className="overflow-hidden col-span-4 shadow-sm rounded-lg">
+                            <div className="p-4 m-4 card bg-base-200">
+                                {/* { flash.success && (
                                         <div role="alert" className="alert alert-success mb-4">
                                         <svg
                                           xmlns="http://www.w3.org/2000/svg"
@@ -197,11 +187,11 @@ export default function AuthenticatedLayout({ header, children }) {
                                         <span>Your purchase has been confirmed!</span>
                                       </div>
                                     )} */}
-                                    {children}
-                                </div>
+                                {children}
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </main>

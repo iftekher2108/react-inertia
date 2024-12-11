@@ -22,6 +22,13 @@
         "vite": "^5.0"
     },
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.7.1"
+        "@fortawesome/fontawesome-free": "^6.7.1",
+        "datatables.net-buttons-dt": "^3.2.0",
+        "datatables.net-dt": "^2.1.8",
+        "datatables.net-react": "^1.0.0",
+        "datatables.net-responsive-dt": "^3.0.3",
+        "datatables.net-select-dt": "^2.1.0",
+        "jszip": "^3.10.1",
+        "pdfmake": "^0.2.15"
     }
 }

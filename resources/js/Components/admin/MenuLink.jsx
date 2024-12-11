@@ -7,7 +7,7 @@ function MenuLink({
  }) {
     return(
         <>
-            <Link {...props} className={ 'p-3 mb-2 flex items-center hover:bg-primary focus:bg-primary'+' '+(active ? 'bg-primary ' : '')} >{children}</Link>
+            <Link {...props} className={ 'py-3 my-1 flex text-opacity-80 text-white items-center active:text-white focus:text-white  '+' '+(active ? 'bg-primary hover:bg-primary active:bg-primary focus:bg-primary' : '')} >{children}</Link>
         </>
 
     )
