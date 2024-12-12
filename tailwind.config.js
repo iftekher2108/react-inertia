@@ -20,7 +20,7 @@ export default {
     daisyui: {
         themes: [
             {
-                mytheme: {
+                default: {
                     primary: "#0089d5",
 
                     secondary: "#697565",

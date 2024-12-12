@@ -2,24 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 summary {
     @apply !p-3 text-white text-opacity-80;
 }
 
-.dt-buttons {
-    @apply flex gap-2
-}
+/* .dt-buttons {
+    @apply flex gap-2;
+} */
 .dt-buttons .dt-button {
-    @apply btn btn-primary text-white;
-}
-.btn {
-    @apply text-white
-}
-.table.dataTable :where(th,td) {
-    @apply border border-gray-400
+    @apply !btn !btn-primary !text-white !mb-1;
 }
 
-.table.dataTable .select-info {
-    @apply mx-3
+.dt-button-collection {
+    @apply !bg-primary;
 }
+
+select.dt-input {
+    @apply w-[50%]
+}
+.btn {
+    @apply text-white;
+}
+table.dataTable :where(td) {
+    @apply border-2 border-gray-300;
+}
+table th {
+    @apply bg-primary text-white;
+}
+table tr {
+    @apply hover:bg-slate-200;
+}
+
+/* table.dataTable .select-info {
+    @apply mx-3;
+} */

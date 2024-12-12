@@ -13,8 +13,8 @@ import 'datatables.net-responsive-dt';
 import 'datatables.net-staterestore-dt';
 import jszip from 'jszip';
 import pdfmake from 'pdfmake';
+function Category_list() {
 
-function Customer_list() {
     useEffect(() => {
         $.fn.dataTable.Buttons.jszip = jszip;
         $.fn.dataTable.Buttons.pdfMake = pdfmake;
@@ -67,88 +67,39 @@ function Customer_list() {
         {
             id: 1,
             name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
+            status:'1'
         },
         {
             id: 1,
             name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
+            status:'0'
         },
         {
             id: 1,
             name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
+            status:'1'
         },
-        {
-            id: 1,
-            name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
-        },
-        {
-            id: 1,
-            name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
-        },
-        {
-            id: 1,
-            name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
-        },
-        {
-            id: 1,
-            name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
-        },
-        {
-            id: 1,
-            name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
-        },
-        {
-            id: 1,
-            name: "parvez",
-            address: 'dhaka',
-            number: '39208423',
-            email: 'parvez@gmail.com',
-        }
+
 
     ]
 
-    return (
+    return(
         <AuthenticatedLayout>
-            <h1 className="text-lg mb-3">
-                Customer List
+             <h1 className="text-lg mb-3">
+                Category List
             </h1>
 
             <div className="flex justify-between items-center mb-3">
                 <button className="btn btn-error">All Delete</button>
-                <Link href={route('customer.add')} className="btn btn-primary">Add Customer</Link>
+                <Link href={route('medicine.category.add')} className="btn btn-primary">Add Category</Link>
             </div>
 
             <table className="data-table">
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th>Name</th>
-                        <th>Address</th>
-                        <th>Mobile</th>
-                        <th>Email</th>
+                        <th>Category Name</th>
+                        <th>Status</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -159,9 +110,8 @@ function Customer_list() {
                         <tr key={index}>
                             <td>{data.id}</td>
                             <td>{data.name}</td>
-                            <td>{data.address}</td>
-                            <td>{data.number}</td>
-                            <td>{data.email}</td>
+                            <td>{data.status == 1 ? <span className="badge badge-success">Active</span> : <span className="badge badge-error">Inactive</span>}</td>
+
                             <td className="text-end">
                                 <button className="btn btn-primary btn-sm m-1">Edit</button>
                                 <button className="btn btn-error btn-sm m-1">Delete</button>
@@ -172,10 +122,10 @@ function Customer_list() {
                 </tbody>
 
             </table>
-
         </AuthenticatedLayout>
     )
-
 }
 
-export default Customer_list;
+export default Category_list
+
+

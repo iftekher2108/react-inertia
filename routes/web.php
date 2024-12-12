@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\MediCategoryController;
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -30,6 +31,12 @@ Route::controller(CustomerController::class)->group(function(){
     Route::get('add-customer','customer_add')->name('customer.add');
     Route::get('customer-list','customer_list')->name('customer.list');
 });
+
+Route::controller(MediCategoryController::class)->group(function(){
+    Route::get('medicine/category-list','category_list')->name('medicine.category.list');
+    Route::get('medicine/add-category','category_add')->name('medicine.category.add');
+});
+
 
 
 

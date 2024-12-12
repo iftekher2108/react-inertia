@@ -32,13 +32,13 @@ function NavPanel() {
                         <details>
                             <summary>Medicine</summary>
                             <ul>
-                                <li><MenuLink href={''} active={''}>Add Category</MenuLink></li>
-                                <li><MenuLink href={''} active={''}>Category List</MenuLink></li>
+                                <li><MenuLink href={route('medicine.category.add')} active={route().current('medicine.category.add')}>Add Category</MenuLink></li>
+                                <li><MenuLink href={route('medicine.category.list')} active={route().current('medicine.category.list')}>Category List</MenuLink></li>
                                 <li><MenuLink href={''} active={''}>Add Unit</MenuLink></li>
                                 <li><MenuLink href={''} active={''}>Unit List</MenuLink></li>
                                 <li><MenuLink href={''} active={''}>Add Type</MenuLink></li>
                                 <li><MenuLink href={''} active={''}>Type List</MenuLink></li>
-                                <li><MenuLink href={''} active={''}>Leaf Setting</MenuLink></li>
+                                <li><MenuLink href={''} active={''}>Box Size</MenuLink></li>
                                 <li><MenuLink href={''} active={''}>Add Medicine</MenuLink></li>
                                 <li><MenuLink href={''} active={''}>Medicine List</MenuLink></li>
                             </ul>

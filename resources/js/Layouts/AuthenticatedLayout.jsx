@@ -4,13 +4,14 @@ import NavLink from '@/Components/auth/NavLink';
 import ResponsiveNavLink from '@/Components/auth/ResponsiveNavLink';
 import { Link, usePage } from '@inertiajs/react';
 import NavPanel from '@/Components/admin/NavPanel';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 export default function AuthenticatedLayout({ header, children }) {
+
+
     const user = usePage().props.auth.user;
-    // const { flash,auth } = usePage().props
-    // console.log(props)
-    const [showingNavigationDropdown, setShowingNavigationDropdown] =
-        useState(false);
+
+    const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
 
     return (
         <div className="min-h-screen bg-base-100">

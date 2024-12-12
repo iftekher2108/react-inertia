@@ -1,11 +1,10 @@
-import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout"
+import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 
-
-function Add_customer() {
-    return (
+function Add_category() {
+    return(
         <AuthenticatedLayout>
             <h1 className="text-lg mb-3">
-                Add Customer
+                Add Category
             </h1>
             <div className="lg:grid grid-cols-2 p-6">
                 <form>
@@ -33,5 +32,5 @@ function Add_customer() {
     )
 }
 
-export default Add_customer
+export default Add_category
 
